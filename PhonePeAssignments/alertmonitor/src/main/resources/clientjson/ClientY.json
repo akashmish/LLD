@@ -1,0 +1,40 @@
+[
+    {
+      "client": "Y",
+      "eventType": "PAYMENT_EXCEPTION",
+      "alertConfig": {
+        "type": "SIMPLE_COUNT",
+        "count": 10,
+        "windowSizeInSecs": 1
+      },
+      "dispatchStrategyList": [
+        {
+          "type": "CONSOLE",
+          "message": "issue in payment"
+        },
+        {
+          "type": "EMAIL",
+          "message": "payment exception threshold breached"
+        },
+        {
+          "type": "MOBILE",
+          "message": "payment exception threshold breached"
+        }
+      ]
+    },
+    {
+      "client": "Y",
+      "eventType": "GENERIC_EXCEPTION",
+      "alertConfig": {
+        "type": "SLIDING_WINDOW",
+        "count": 1,
+        "windowSizeInSecs": 1
+      },
+      "dispatchStrategyList": [
+        {
+          "type": "CONSOLE",
+          "message": "issue in user service"
+        }
+      ]
+    }
+  ]

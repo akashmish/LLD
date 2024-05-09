@@ -1,0 +1,59 @@
+[
+    {
+      "client": "TEST",
+      "eventType": "PAYMENT_EXCEPTION",
+      "alertConfig": {
+        "type": "TUMBLING_WINDOW",
+        "count": 2,
+        "windowSizeInSecs": 10
+      },
+      "dispatchStrategyList": [
+        {
+          "type": "CONSOLE",
+          "message": "issue in payment"
+        },
+        {
+          "type": "EMAIL",
+          "message": "payment exception threshold breached"
+        }
+      ]
+    },
+    {
+      "client": "TEST",
+      "eventType": "AKASH_EXCEPTION",
+      "alertConfig": {
+        "type": "SLIDING_WINDOW",
+        "count": 4,
+        "windowSizeInSecs": 10
+      },
+      "dispatchStrategyList": [
+        {
+          "type": "CONSOLE",
+          "message": "issue in console"
+        },
+        {
+            "type": "MOBILE",
+            "message": "Akash will send this notification to mobile"
+          }
+      ]
+    },
+    {
+      "client": "TEST",
+      "eventType": "AKASH_EXCEPTION",
+      "alertConfig": {
+        "type": "SIMPLE_COUNT",
+        "count": 4,
+        "windowSizeInSecs": 10
+      },
+      "dispatchStrategyList": [
+        {
+          "type": "CONSOLE",
+          "message": "issue in console"
+        },
+        {
+            "type": "MOBILE",
+            "message": "Akash will send this notification to mobile"
+          }
+      ]
+    }
+  ]
