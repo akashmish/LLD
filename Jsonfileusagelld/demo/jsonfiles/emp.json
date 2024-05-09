@@ -1,0 +1,15 @@
+{
+    "firstname":"Akash",
+    "lstName":"misra",
+    "address":[
+        {
+            "street":"lucknow",
+            "gali":"lucknow",
+            "Mohalla":"lucknow"
+        },{
+            "street":"lucknow",
+            "gali":"lucknow",
+            "Mohalla":"lucknow"
+        }
+    ]
+}
